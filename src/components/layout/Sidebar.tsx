@@ -9,6 +9,7 @@ interface NavItem {
   hasDropdown?: boolean;
 }
 
+
 interface SidebarProps {
   collapsed: boolean;
 }

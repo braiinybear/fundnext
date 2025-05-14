@@ -30,18 +30,18 @@ const TransactionsPage: React.FC = () => {
   const headers = activeTab === 'Billing History' ? billingHeaders : payoutHeaders;
 
   return (
-    <div className="p-6">
-      <h2 className="text-xl font-semibold mb-6">Billing-Payment Method</h2>
+    <div className="p-4 sm:p-6">
+      <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Billing-Payment Method</h2>
 
-      <div className="flex gap-6">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
         {/* Sidebar Card */}
-        <div className="w-64 bg-white rounded-xl shadow p-4">
-          <div className="font-semibold text-lg mb-4">Transactions</div>
+        <div className="w-full lg:w-64 bg-white rounded-xl shadow p-4">
+          <div className="font-semibold text-base sm:text-lg mb-4">Transactions</div>
           <ul>
             {['Billing History', 'Payout History'].map((tab) => (
               <li
                 key={tab}
-                className={`cursor-pointer px-4 py-3 rounded-lg ${
+                className={`cursor-pointer px-4 py-3 rounded-lg text-sm sm:text-base ${
                   activeTab === tab
                     ? 'bg-indigo-50 border-l-4 border-indigo-600 text-indigo-600 font-semibold'
                     : 'hover:bg-gray-50 text-gray-700'
@@ -55,11 +55,13 @@ const TransactionsPage: React.FC = () => {
         </div>
 
         {/* Main Content Card */}
-       <div className="flex-1 bg-white rounded-xl shadow p-6">
-  <div className="flex justify-between items-center mb-6 border-b pb-4">
-    <h3 className="text-2xl font-bold text-gray-800">{activeTab}</h3>
-    <span className="text-2xl text-indigo-700 font-bold">Total Amount: $0</span>
-  </div>
+        <div className="flex-1 bg-white rounded-xl shadow p-4 sm:p-6 overflow-hidden">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 sm:mb-6 border-b pb-4">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-800">{activeTab}</h3>
+            <span className="text-lg sm:text-2xl text-indigo-700 font-bold mt-2 sm:mt-0">
+              Total Amount: $0
+            </span>
+          </div>
 
           {/* Table */}
           <div className="overflow-x-auto">
@@ -67,7 +69,9 @@ const TransactionsPage: React.FC = () => {
               <thead className="bg-gray-100 text-gray-700 font-semibold">
                 <tr>
                   {headers.map((header) => (
-                    <th key={header} className="px-4 py-2 whitespace-nowrap">{header}</th>
+                    <th key={header} className="px-4 py-2 whitespace-nowrap">
+                      {header}
+                    </th>
                   ))}
                 </tr>
               </thead>
