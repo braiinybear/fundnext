@@ -1,0 +1,22 @@
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import Dashboard from './components/Dashboard/Dashboard';
+import TransactionsPage from './pages/TransactionsPage';
+import AccountOverview from './pages/AccountOverview';
+
+function App() {
+  return (
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Navigate to="/account" />} />
+          <Route path="/account" element={<Dashboard />} />
+          <Route path="/transactions" element={<TransactionsPage />} />
+           <Route path="/accounts/account-overview" element={<AccountOverview />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
+}
+
+export default App;
