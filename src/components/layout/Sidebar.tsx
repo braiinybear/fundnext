@@ -52,11 +52,8 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
   }, []);
 
   return (
-    <aside
-      className={`${
-        collapsed ? 'w-16' : 'w-60'
-      } bg-indigo-950 text-white transition-all duration-300 ease-in-out flex flex-col h-full`}
-    >
+   <aside className="w-60 bg-indigo-950 text-white flex flex-col h-full">
+
       <div className="p-4 flex items-center justify-center">
         {collapsed ? (
           <span className="text-2xl font-bold">FN</span>
