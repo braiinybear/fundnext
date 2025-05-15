@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/account" element={<Navigate to="/account" />} />
+          <Route path="/" element={<Navigate to="/account" />} />
           <Route path="/account" element={<Dashboard />} />
           <Route path="/transactions" element={<TransactionsPage />} />
            <Route path="/accounts/account-overview" element={<AccountOverview />} />
