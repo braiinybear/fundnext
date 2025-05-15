@@ -16,7 +16,7 @@ const Dashboard: React.FC = () => {
               Accounts
             </h1>
             <p className="text-gray-200 text-sm sm:text-base max-w-md">
-              Unlock your trading potential with FundedNext. Start trading now!
+              Unlock your trading potential with fundednxt. Start trading now!
             </p>
           </div>
 

@@ -59,7 +59,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
         {collapsed ? (
           <span className="text-2xl font-bold">FN</span>
         ) : (
-          <span className="text-xl font-bold text-white">FUNDEDNEXT</span>
+          <span className="text-xl font-bold text-white">FUNDEDNXT</span>
         )}
       </div>
 

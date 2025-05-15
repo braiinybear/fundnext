@@ -42,14 +42,14 @@ const AccountOverview: React.FC = () => {
               <span className="material-symbols-outlined text-indigo-600">
                 verified
               </span>
-              Initial Balance: <span className="font-semibold">50000</span>
+              Initial Balance: <span className="font-semibold">200000</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="material-symbols-outlined text-indigo-600">
                 verified
               </span>
               Plan Type:{" "}
-              <span className="font-semibold">Express Demo | 50k</span>
+              <span className="font-semibold">Express | 200k</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="material-symbols-outlined text-indigo-600">
@@ -69,12 +69,12 @@ const AccountOverview: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-6">
             <div className="flex justify-between items-center bg-gray-50 py-2 px-4 rounded-md border border-gray-200">
               <span className="text-gray-700 font-medium">Log In</span>
-              <span className="font-mono text-gray-800">123456</span>
+              <span className="font-mono text-gray-800">21180148</span>
             </div>
 
             <div className="flex justify-between items-center bg-gray-50 py-2 px-4 rounded-md border border-gray-200">
               <span className="text-gray-700 font-medium">Investor Pass.</span>
-              <span className="font-mono text-gray-800">@Fn2022*</span>
+              <span className="font-mono text-gray-800">yuh*7689</span>
             </div>
 
             <div className="flex justify-between items-center bg-gray-50 py-2 px-4 rounded-md border border-gray-200">
@@ -97,7 +97,7 @@ const AccountOverview: React.FC = () => {
             <div className="flex justify-between items-center bg-gray-50 py-2 px-4 rounded-md border border-gray-200">
               <span className="text-gray-700 font-medium">Server</span>
               <span className="font-semibold text-gray-800">
-                FundedNext-Server
+                fundednxt-Server
               </span>
             </div>
           </div>
@@ -131,10 +131,10 @@ const AccountOverview: React.FC = () => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {[
-                { label: "Balance", value: "$50,000" },
-                { label: "Profit/Loss", value: "$8,500" },
+                { label: "Balance", value: "$200000" },
+                { label: "Profit/Loss", value: "$15000" },
                 { label: "Floating Loss", value: "$0" },
-                { label: "Trading Days", value: "10" },
+                { label: "Trading Days", value: "21" },
               ].map((stat, idx) => (
                 <div
                   key={idx}
@@ -174,7 +174,7 @@ const AccountOverview: React.FC = () => {
                     Daily Loss Limit
                   </div>
                   <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded">
-                    Ongoing
+                    Passed
                   </span>
                 </div>
                 <p className="text-sm">Max Loss Limit: 1,250.00</p>
@@ -194,7 +194,7 @@ const AccountOverview: React.FC = () => {
                     Overall Loss Limit
                   </div>
                   <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded">
-                    Ongoing
+                    Passed
                   </span>
                 </div>
                 <p className="text-sm">Max Loss Limit: 2,500.00</p>
@@ -234,8 +234,8 @@ const AccountOverview: React.FC = () => {
                     Passed
                   </span>
                 </div>
-                <p className="text-sm">Minimum: 6,250.00</p>
-                <p className="text-sm">Current Result: $12,500</p>
+                <p className="text-sm">Minimum: 15,000</p>
+                <p className="text-sm">Current Result: $15,000</p>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@ const AccountOverview: React.FC = () => {
           {/* Support */}
           <div className="space-y-3">
             <p className="font-semibold text-gray-800">
-              FundedNext Email Support
+              fundednxt Email Support
             </p>
             <div className="flex justify-center">
               <img
@@ -265,7 +265,7 @@ const AccountOverview: React.FC = () => {
               Contact
             </button>
             <p className="text-sm text-blue-700 underline">
-              support@fundednext.com
+              support@fundednxt.com
             </p>
           </div>
 
