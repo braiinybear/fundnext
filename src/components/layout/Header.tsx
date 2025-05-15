@@ -23,8 +23,8 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
               <span className="mr-2 text-gray-700">Chander Praka</span>
               <img
                 className="h-8 w-8 rounded-full bg-gray-200"
-                src="https://via.placeholder.com/32"
-                alt="User"
+                src=""
+                alt=""
               />
               <span className="material-symbols-outlined text-gray-500 ml-1">
                 expand_more

@@ -25,7 +25,7 @@ const PayoutCard = ({
       className={`${bg} ${border} rounded-xl p-3 sm:p-4 flex justify-between items-center cursor-pointer hover:shadow-md transition`}
     >
       <div>
-        <div className="flex items-center gap-x-30">
+        <div className="flex items-center gap-x-3">
           <img src={icon} alt={label} className="w-10 h-10" />
           <div className="relative group inline-block">
             <div className="rounded-full p-1 flex items-center justify-center cursor-pointer">
@@ -37,7 +37,7 @@ const PayoutCard = ({
             </div>
           </div>
         </div>
-        <div className="text-xl sm:text-2xl md:text-3xl font-semi-bold text-gray-800">
+        <div className="text-xl sm:text-xl md:text-2xl font-semi-bold text-gray-800">
           {value}
         </div>
         <div className="text-xs sm:text-sm text-gray-600 mt-1">{label}</div>

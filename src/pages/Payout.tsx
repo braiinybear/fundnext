@@ -11,7 +11,7 @@ const payoutCards = [
     label: "Withdrawable Profit",
     value: "$3000",
     icon: dollarimg,
-    bg: "bg-white",
+    bg: "bg-indigo-50",
     border: "border",
     tooltip: "Total amount of payout funds currently available for you to withdraw: $0",
   },
@@ -41,10 +41,10 @@ const PayoutPage = () => {
 
   return (
     <div className="w-full p-4 space-y-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
         <div className="bg-white border rounded-xl p-6 space-y-4 shadow-sm">
           <h2 className="text-lg font-semibold text-gray-800">Payout</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 bg-gray-200 gap-4">
             {payoutCards.map((card, idx) => (
               <PayoutCard
                 key={idx}
