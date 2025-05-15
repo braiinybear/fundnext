@@ -81,16 +81,9 @@ const AccountOverview: React.FC = () => {
               <span className="text-gray-700 font-medium">Master Pass.</span>
               <div className="flex gap-2 items-center">
                 <span className="tracking-widest font-mono text-gray-800">
-                  ••••
+                  2025$#@67
                 </span>
-                <button className="flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800">
-                  <RotateCw size={14} />
-                  <span className="hidden sm:inline">Reset</span>
-                </button>
-                <button className="flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800">
-                  <Eye size={14} />
-                  <span className="hidden sm:inline">View</span>
-                </button>
+                
               </div>
             </div>
 
