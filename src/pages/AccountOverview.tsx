@@ -88,9 +88,9 @@ const AccountOverview: React.FC = () => {
             </div>
 
             <div className="flex justify-between items-center bg-gray-50 py-2 px-4 rounded-md border border-gray-200">
-              <span className="text-gray-700 font-medium">Server</span>
+              {/* <span className="text-gray-700 font-medium">Server</span> */}
               <span className="font-semibold text-gray-800">
-                fundednxt-Server
+                fundednext-Server
               </span>
             </div>
           </div>
@@ -158,15 +158,15 @@ const AccountOverview: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
               {/* Daily Loss */}
-              <div className="bg-blue-50 p-3 sm:p-4 rounded-lg border border-blue-200">
+             <div className="bg-blue-50 p-3 sm:p-4 rounded-lg border border-blue-200">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-2 font-semibold text-blue-900">
-                    <span className="material-symbols-outlined text-blue-600">
+                  <div className="flex items-center gap-2 font-semibold text-green-900">
+                    <span className="material-symbols-outlined text-green-600">
                       check_circle
                     </span>
                     Daily Loss Limit
                   </div>
-                  <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded">
+                  <span className="text-xs bg-green-200 text-green-800 px-2 py-1 rounded">
                     Passed
                   </span>
                 </div>
@@ -180,13 +180,13 @@ const AccountOverview: React.FC = () => {
               {/* Overall Loss */}
               <div className="bg-blue-50 p-3 sm:p-4 rounded-lg border border-blue-200">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-2 font-semibold text-blue-900">
-                    <span className="material-symbols-outlined text-blue-600">
+                  <div className="flex items-center gap-2 font-semibold text-green-900">
+                    <span className="material-symbols-outlined text-green-600">
                       check_circle
                     </span>
                     Overall Loss Limit
                   </div>
-                  <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded">
+                  <span className="text-xs bg-green-200 text-green-800 px-2 py-1 rounded">
                     Passed
                   </span>
                 </div>
