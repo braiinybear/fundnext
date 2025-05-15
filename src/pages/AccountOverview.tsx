@@ -1,5 +1,5 @@
 import React from "react";
-import { Eye, RotateCw, Globe, HelpCircle } from "lucide-react";
+import {  Globe, HelpCircle } from "lucide-react";
 
 const AccountOverview: React.FC = () => {
   // Table data moved inside the component
