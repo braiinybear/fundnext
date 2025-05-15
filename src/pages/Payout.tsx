@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Info, ChevronDown, RefreshCw } from "lucide-react";
 
 const payoutCards = [
