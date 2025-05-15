@@ -3,6 +3,7 @@ import Layout from './components/layout/Layout';
 import Dashboard from './components/Dashboard/Dashboard';
 import TransactionsPage from './pages/TransactionsPage';
 import AccountOverview from './pages/AccountOverview';
+import PayoutPage from './pages/Payout';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/account" element={<Dashboard />} />
           <Route path="/transactions" element={<TransactionsPage />} />
            <Route path="/accounts/account-overview" element={<AccountOverview />} />
+           <Route path="/payout" element={<PayoutPage />} />
         </Routes>
       </Layout>
     </Router>
