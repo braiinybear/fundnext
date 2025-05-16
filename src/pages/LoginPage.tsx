@@ -6,15 +6,21 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email && password) {
-      localStorage.setItem('authToken', 'your-token');
-      navigate('/account');
-    } else {
-      alert('Please fill all fields');
-    }
-  };
+ const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  // Hardcoded credentials
+  const validEmail = 'Chanderkotnala1@gmail.com';
+  const validPassword = 'Raksheeza@786';
+
+  if (email === validEmail && password === validPassword) {
+    localStorage.setItem('authToken', 'your-token');
+    navigate('/account');
+  } else {
+    alert('Invalid email or password');
+  }
+};
+
 
   return (
     <div className="flex min-h-screen bg-white">
