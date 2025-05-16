@@ -170,10 +170,10 @@ const AccountOverview: React.FC = () => {
                     Passed
                   </span>
                 </div>
-                <p className="text-sm">Max Loss Limit: 1,250.00</p>
+                <p className="text-sm">Max Loss Limit: $1,250.00</p>
                 <p className="text-sm">Daily Loss till now: $0</p>
                 <p className="text-sm font-semibold mt-2">
-                  Today's Permitted Loss: 2500
+                  Today's Permitted Loss: $2500
                 </p>
               </div>
 
@@ -190,10 +190,10 @@ const AccountOverview: React.FC = () => {
                     Passed
                   </span>
                 </div>
-                <p className="text-sm">Max Loss Limit: 2,500.00</p>
+                <p className="text-sm">Max Loss Limit: $2,500.00</p>
                 <p className="text-sm">Overall Loss till now: $0</p>
                 <p className="text-sm font-semibold mt-2">
-                  Max Permitted Loss: 5000
+                  Max Permitted Loss: $5000
                 </p>
               </div>
 
@@ -227,7 +227,7 @@ const AccountOverview: React.FC = () => {
                     Passed
                   </span>
                 </div>
-                <p className="text-sm">Minimum: 15,000</p>
+                <p className="text-sm">Minimum: $15,000</p>
                 <p className="text-sm">Current Result: $15,000</p>
               </div>
             </div>
