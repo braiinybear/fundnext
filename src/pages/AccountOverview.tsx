@@ -105,7 +105,7 @@ const AccountOverview: React.FC = () => {
             Trading Cycle Details
           </h4>
           <p className="text-sm text-gray-700 mb-2">
-            <span className="font-semibold">Start Date:</span> Dec 5, 2025
+            <span className="font-semibold">Start Date:</span> 2025
           </p>
           <p className="text-sm text-gray-700">
             <span className="font-semibold">End Date:</span> Dec 31, 2026
