@@ -42,14 +42,14 @@ const AccountOverview: React.FC = () => {
               <span className="material-symbols-outlined text-indigo-600">
                 verified
               </span>
-              Initial Balance: <span className="font-semibold">200000</span>
+              Initial Balance: <span className="font-semibold">$200000</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="material-symbols-outlined text-indigo-600">
                 verified
               </span>
               Plan Type:{" "}
-              <span className="font-semibold">Express | 200k</span>
+              <span className="font-semibold">Express | $200k</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="material-symbols-outlined text-indigo-600">
