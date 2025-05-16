@@ -35,7 +35,7 @@ const AccountOverview: React.FC = () => {
             <span className="text-indigo-800">Chander Prakash Kotnala</span> !
           </h3>
           <p className="text-gray-700 mb-4">
-            Currently, you have an Express account
+            Currently, you have an Express Real account
           </p>
           <ul className="text-sm text-gray-800 space-y-2">
             <li className="flex items-center gap-2">
@@ -105,10 +105,10 @@ const AccountOverview: React.FC = () => {
             Trading Cycle Details
           </h4>
           <p className="text-sm text-gray-700 mb-2">
-            <span className="font-semibold">Start Date:</span> Dec 5, 2022
+            <span className="font-semibold">Start Date:</span> Dec 5, 2025
           </p>
           <p className="text-sm text-gray-700">
-            <span className="font-semibold">End Date:</span> Dec 31, 2022
+            <span className="font-semibold">End Date:</span> Dec 31, 2026
           </p>
         </div>
       </div>
