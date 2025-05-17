@@ -1,9 +1,22 @@
+import { useState } from "react";
+
 interface KYCFormPopupProps {
   onClose: () => void;
   onNext: () => void;
+  onChange: (data: { pan: string; aadhar: string }) => void;
 }
 
-const KYCFormPopup = ({ onClose, onNext }: KYCFormPopupProps) => {
+const KYCFormPopup = ({ onClose, onNext, onChange }: KYCFormPopupProps) => {
+  const [formData, setFormData] = useState({ pan: "", aadhar: "" });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const updated = { ...formData, [name]: value };
+    
+    setFormData(updated);
+    onChange(updated);
+  };
+
   return (
     <div className="fixed inset-0 z-10 backdrop-blur-xs bg-black/20 flex items-center justify-center">
       <div className="bg-white rounded-xl shadow-lg w-full max-w-md p-6 space-y-4 relative">
@@ -21,7 +34,6 @@ const KYCFormPopup = ({ onClose, onNext }: KYCFormPopupProps) => {
           className="space-y-4"
           onSubmit={(e) => {
             e.preventDefault();
-            onClose();
             onNext();
           }}
         >
@@ -31,6 +43,9 @@ const KYCFormPopup = ({ onClose, onNext }: KYCFormPopupProps) => {
             </label>
             <input
               type="text"
+              name="pan"
+              value={formData.pan}
+              onChange={handleChange}
               required
               placeholder="ABCDE1234F"
               className="mt-1 w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -42,6 +57,9 @@ const KYCFormPopup = ({ onClose, onNext }: KYCFormPopupProps) => {
             </label>
             <input
               type="text"
+              name="aadhar"
+              value={formData.aadhar}
+              onChange={handleChange}
               required
               placeholder="1234 5678 9012"
               className="mt-1 w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"

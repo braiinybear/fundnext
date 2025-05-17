@@ -1,8 +1,25 @@
+import { useState } from "react";
+
 interface BankDetailsPopupProps {
   onClose: () => void;
+   onChange: (data: { accountName: string; accountNumber: string; ifsc: string }) => void;
+
 }
 
-const BankDetailsPopup = ({ onClose }: BankDetailsPopupProps) => {
+const BankDetailsPopup = ({ onClose, onChange }: BankDetailsPopupProps) => {
+  const [formData, setFormData] = useState({
+    accountName: "",
+    accountNumber: "",
+    ifsc: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const updated = { ...formData, [name]: value };
+    setFormData(updated);
+    onChange(updated);
+  };
+
   return (
     <div className="fixed inset-0 z-20 backdrop-blur-xs bg-black/30 flex items-center justify-center">
       <div className="bg-white rounded-xl shadow-lg w-full max-w-md p-6 space-y-4 relative">
@@ -30,6 +47,9 @@ const BankDetailsPopup = ({ onClose }: BankDetailsPopupProps) => {
             </label>
             <input
               type="text"
+              name="accountName"
+              value={formData.accountName}
+              onChange={handleChange}
               placeholder="John Doe"
               required
               className="mt-1 w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -42,6 +62,9 @@ const BankDetailsPopup = ({ onClose }: BankDetailsPopupProps) => {
             </label>
             <input
               type="text"
+              name="accountNumber"
+              value={formData.accountNumber}
+              onChange={handleChange}
               placeholder="1234567890"
               required
               className="mt-1 w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -54,6 +77,9 @@ const BankDetailsPopup = ({ onClose }: BankDetailsPopupProps) => {
             </label>
             <input
               type="text"
+              name="ifsc"
+              value={formData.ifsc}
+              onChange={handleChange}
               placeholder="SBIN0001234"
               required
               className="mt-1 w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
