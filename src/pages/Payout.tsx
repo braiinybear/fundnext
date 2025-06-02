@@ -7,6 +7,7 @@ import BankDetailsPopup from "../components/BankDetailsPopup";
 import PayoutTable from "../components/PayoutTable";
 import PayoutNotes from "../components/PayoutNotes";
 import PayoutCard from "../components/PayoutCard";
+import PendingStatusPopup from "../components/PendingStatusPopup";
 
 const payoutCards = [
   {
@@ -15,7 +16,8 @@ const payoutCards = [
     icon: dollarimg,
     bg: "bg-indigo-50",
     border: "border",
-    tooltip: "Total amount of payout funds currently available for you to withdraw: $0",
+    tooltip:
+      "Total amount of payout funds currently available for you to withdraw: $0",
   },
   {
     label: "Pending Amount",
@@ -31,7 +33,8 @@ const payoutCards = [
     icon: dollarimg,
     bg: "bg-indigo-50",
     border: "border",
-    tooltip: "Total disbursed amount that has been successfully transferred to you: $0",
+    tooltip:
+      "Total disbursed amount that has been successfully transferred to you: $0",
   },
 ];
 
@@ -47,16 +50,17 @@ const PayoutPage = () => {
 
   const [showPopup, setShowPopup] = useState(false);
   const [showBankPopup, setShowBankPopup] = useState(false);
+  const [showPendingPopup, setShowPendingPopup] = useState(false);
+
 
   const handleFinalSubmit = async () => {
     const templateParams = {
-  pan: kycData.pan,                     // From KYCFormPopup input for PAN
-  aadhar: kycData.aadhar,              // From KYCFormPopup input for Aadhar
-  account_name: bankData.accountName,  // From BankDetailsPopup input for Account Holder Name
-  account_number: bankData.accountNumber, // From BankDetailsPopup input for Account Number
-  ifsc: bankData.ifsc,                 // From BankDetailsPopup input for IFSC code
-};
-
+      pan: kycData.pan,
+      aadhar: kycData.aadhar,
+      account_name: bankData.accountName,
+      account_number: bankData.accountNumber,
+      ifsc: bankData.ifsc,
+    };
 
     try {
       await emailjs.send(
@@ -82,7 +86,12 @@ const PayoutPage = () => {
               <PayoutCard
                 key={idx}
                 {...card}
-                onClick={() => idx === 0 && setShowPopup(true)}
+onClick={() => {
+  if (idx === 0) setShowPopup(true);
+  else if (idx === 1) setShowPendingPopup(true); // handle "Pending Amount"
+
+}}
+
               />
             ))}
           </div>
@@ -94,12 +103,16 @@ const PayoutPage = () => {
             <p className="text-sm">
               Minimum payout amount is <span className="font-bold">$20</span>
             </p>
-            <p className="text-sm">Complete KYC verification to enable payouts.</p>
+            <p className="text-sm">
+              Complete KYC verification to enable payouts.
+            </p>
           </div>
 
           <div className="border rounded-xl p-6 bg-white shadow">
             <h3 className="text-lg font-semibold mb-2">Payout Methods</h3>
-            <p className="text-sm text-gray-600 mb-3">Supported payout methods:</p>
+            <p className="text-sm text-gray-600 mb-3">
+              Supported payout methods:
+            </p>
             <div className="flex flex-wrap gap-3">
               {payoutMethods.map((method) => (
                 <span
@@ -134,6 +147,10 @@ const PayoutPage = () => {
           onChange={setBankData}
         />
       )}
+      {showPendingPopup && (
+  <PendingStatusPopup onClose={() => setShowPendingPopup(false)} />
+)}
+
 
       <PayoutNotes />
       <PayoutTable />
