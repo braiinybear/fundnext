@@ -2,7 +2,7 @@ import { X } from "lucide-react";
 
 const steps = [
   { title: "Created", datetime: "17 may, 12:30", completed: true },
-  { title: "Processed by Exness", datetime: "17 may, 15:16", completed: true },
+  { title: "Processed by FundedNext", datetime: "17 may, 15:16", completed: true },
   { title: "Sent to provider", datetime: "26 may, 05:38", completed: true },
   { title: "Crediting to your account", datetime: null, completed: false },
 ];
