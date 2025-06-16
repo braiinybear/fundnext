@@ -13,6 +13,7 @@ const LoginPage = () => {
   const validEmail = 'Chanderkotnala1@gmail.com';
   const validPassword = 'Raksheeza@786';
 
+  
   if (email === validEmail && password === validPassword) {
     localStorage.setItem('authToken', 'your-token');
     navigate('/account');
